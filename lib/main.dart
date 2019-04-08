@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_coloured_app_bar_with_animation/ColouredBottomBar/ColouredBarIcon.dart';
+import 'package:flutter_coloured_app_bar_with_animation/ColouredBottomBar/ColouredBottomBarWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Coloured App Bar'),
     );
   }
 }
@@ -26,13 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,19 +43,15 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
           ],
         ),
       ),
-      
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+      bottomNavigationBar: ColouredBottomBarWidget(itemList: [
+        ColouredBarIcon(title: "item 1", iconSrc:"assets/face.png", color: Colors.grey),
+        ColouredBarIcon(title: "item 2", iconSrc:"assets/face.png", color: Colors.red),
+        ColouredBarIcon(title: "item 3", iconSrc:"assets/face.png", color: Colors.red),
+        ColouredBarIcon(title: "item 4", iconSrc:"assets/face.png", color: Colors.red),
+      ],),
     );
   }
 }
