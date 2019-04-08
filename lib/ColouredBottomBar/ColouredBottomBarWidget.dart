@@ -86,7 +86,7 @@ class ColouredBottomBarWidgetState extends State<ColouredBottomBarWidget>
                     child: Column(
                       children: <Widget>[
                         Image.asset(item.iconSrc),
-                        Text(item.title)
+                        Text(item.title, style: TextStyle(color: Colors.white),)
                       ],
                     ),
                   ),

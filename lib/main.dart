@@ -50,9 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
         indexButtonActive: 0,
         durationAnimations: 2000,
         itemList: [
-        ColouredBarIcon(title: "BLUE", iconSrc:"assets/face.png", color: Colors.blue),
-        ColouredBarIcon(title: "RED", iconSrc:"assets/face.png", color: Colors.red),
-        ColouredBarIcon(title: "GREEN", iconSrc:"assets/face.png", color: Colors.green),
+        ColouredBarIcon(title: "BLUE", iconSrc:"assets/face_white.png", color: Colors.blue),
+        ColouredBarIcon(title: "RED", iconSrc:"assets/face_white.png", color: Colors.red),
+        ColouredBarIcon(title: "GREEN", iconSrc:"assets/face_white.png", color: Colors.green),
       ],),
     );
   }
