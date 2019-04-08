@@ -41,16 +41,18 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'Tap the bottom buttons ;)',
             ),
           ],
         ),
       ),
-      bottomNavigationBar: ColouredBottomBarWidget(itemList: [
-        ColouredBarIcon(title: "item 1", iconSrc:"assets/face.png", color: Colors.grey),
-        ColouredBarIcon(title: "item 2", iconSrc:"assets/face.png", color: Colors.red),
-        ColouredBarIcon(title: "item 3", iconSrc:"assets/face.png", color: Colors.red),
-        ColouredBarIcon(title: "item 4", iconSrc:"assets/face.png", color: Colors.red),
+      bottomNavigationBar: ColouredBottomBarWidget(
+        indexButtonActive: 0,
+        durationAnimations: 2000,
+        itemList: [
+        ColouredBarIcon(title: "BLUE", iconSrc:"assets/face.png", color: Colors.blue),
+        ColouredBarIcon(title: "RED", iconSrc:"assets/face.png", color: Colors.red),
+        ColouredBarIcon(title: "GREEN", iconSrc:"assets/face.png", color: Colors.green),
       ],),
     );
   }
