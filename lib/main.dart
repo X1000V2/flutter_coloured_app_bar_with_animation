@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_coloured_app_bar_with_animation/ColouredBottomBar/ColouredBarIcon.dart';
+import 'package:flutter_coloured_app_bar_with_animation/ColouredBottomBar/ColouredBottomBarWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Coloured App Bar'),
     );
   }
 }
@@ -26,13 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,21 +41,25 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              'Tap the bottom buttons ;)',
             ),
           ],
         ),
       ),
-      
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+      bottomNavigationBar: ColouredBottomBarWidget(
+        indexButtonActive: 0,
+        durationAnimationColor: 1000,
+        durationAnimationSize: 500,
+        activeIconColor: Colors.white,
+        disableIconColor: Colors.black,
+        onIndexChanged: (newIndex){
+          print("New Index: $newIndex");
+        },
+        itemList: [
+          ColouredBarIcon(title: "red", iconSrc:"assets/face_white.png", color: Colors.red),
+          ColouredBarIcon(title: "green", iconSrc:"assets/face_white.png", color: Colors.green),
+          ColouredBarIcon(title: "blue", iconSrc:"assets/face_white.png", color: Colors.blue),
+      ],),
     );
   }
 }
