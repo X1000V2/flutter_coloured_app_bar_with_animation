@@ -48,11 +48,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: ColouredBottomBarWidget(
         indexButtonActive: 0,
-        durationAnimations: 2000,
+        durationAnimationColor: 1000,
+        durationAnimationSize: 500,
+        activeIconColor: Colors.white,
+        disableIconColor: Colors.black,
         itemList: [
-        ColouredBarIcon(title: "BLUE", iconSrc:"assets/face_white.png", color: Colors.blue),
-        ColouredBarIcon(title: "RED", iconSrc:"assets/face_white.png", color: Colors.red),
-        ColouredBarIcon(title: "GREEN", iconSrc:"assets/face_white.png", color: Colors.green),
+          ColouredBarIcon(title: "red", iconSrc:"assets/face_white.png", color: Colors.red),
+          ColouredBarIcon(title: "green", iconSrc:"assets/face_white.png", color: Colors.green),
+          ColouredBarIcon(title: "blue", iconSrc:"assets/face_white.png", color: Colors.blue),
       ],),
     );
   }
