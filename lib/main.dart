@@ -52,6 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
         durationAnimationSize: 500,
         activeIconColor: Colors.white,
         disableIconColor: Colors.black,
+        onIndexChanged: (newIndex){
+          print("New Index: $newIndex");
+        },
         itemList: [
           ColouredBarIcon(title: "red", iconSrc:"assets/face_white.png", color: Colors.red),
           ColouredBarIcon(title: "green", iconSrc:"assets/face_white.png", color: Colors.green),

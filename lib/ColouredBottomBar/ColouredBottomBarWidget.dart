@@ -8,6 +8,7 @@ class ColouredBottomBarWidget extends StatefulWidget {
   int durationAnimationSize;
   Color activeIconColor;
   Color disableIconColor;
+  final void Function(int) onIndexChanged;
 
   ColouredBottomBarWidget(
       {@required this.itemList,
@@ -15,7 +16,8 @@ class ColouredBottomBarWidget extends StatefulWidget {
       this.durationAnimationColor,
       this.durationAnimationSize,
       this.activeIconColor,
-      this.disableIconColor});
+      this.disableIconColor,
+      this.onIndexChanged});
 
   @override
   State<StatefulWidget> createState() {
@@ -157,6 +159,7 @@ class ColouredBottomBarWidgetState extends State<ColouredBottomBarWidget>
       animateSizeIcon(item, indexTapped);
       animateTextColor(item, indexTapped);
       widget.indexButtonActive = indexTapped;
+      widget.onIndexChanged(widget.indexButtonActive);
     }
   }
 
