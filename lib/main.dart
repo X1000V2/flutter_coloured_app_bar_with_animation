@@ -56,9 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
           print("New Index: $newIndex");
         },
         itemList: [
-          ColouredBarIcon(title: "red", iconSrc:"assets/face_white.png", color: Colors.red),
-          ColouredBarIcon(title: "green", iconSrc:"assets/face_white.png", color: Colors.green),
-          ColouredBarIcon(title: "blue", iconSrc:"assets/face_white.png", color: Colors.blue),
+          ColouredBarIcon(title: "red", iconSrc:"assets/comic.png", color: Colors.red),
+          ColouredBarIcon(title: "green", iconSrc:"assets/hero.png", color: Colors.green),
+          ColouredBarIcon(title: "blue", iconSrc:"assets/comic.png", color: Colors.blue),
       ],),
     );
   }
